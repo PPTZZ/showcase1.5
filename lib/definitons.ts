@@ -8,3 +8,8 @@ export type TProject = Document & {
   tech: string;
   link: string;
 };
+
+export type TDialog = {
+  projects: TProject[];
+  onClose: () => void;
+};

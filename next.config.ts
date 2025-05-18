@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'github.com',
-        pathname: '/PPTZZ/portofolio-images/**',
+        hostname: 'ik.imagekit.io',
+        pathname: '/pwl89PIJucRz3Mc/**',
       },
     ],
   },
