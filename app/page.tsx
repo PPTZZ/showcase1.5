@@ -6,7 +6,7 @@ export default async function Home() {
   const projects = await fetchProjects();
   
   return (
-    <div className="w-[calc(100vw-16rem)] p-5 overflow-scroll">
+    <div className="md:w-[calc(100vw-16rem)] p-5 overflow-scroll">
       <Canvas projects={projects} />
     </div>
   );

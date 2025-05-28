@@ -13,3 +13,9 @@ export type TDialog = {
   projects: TProject[];
   onClose: () => void;
 };
+
+export type TSvgProps = {
+  href: string;
+  id: string;
+  className?: string | string[];
+};
