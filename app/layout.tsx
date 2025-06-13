@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased h-[calc(100vh-10rem)]`}>
+      <body className={`${inter.className} antialiased h-dvh lg:h-[calc(100vh-10rem)] min-w-80`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -32,7 +32,7 @@ export default function RootLayout({
             alt="header image of keyboard"
             width={1920}
             height={249}
-            className="w-full h-40 object-cover"
+            className="w-full h-40 object-cover hidden lg:block"
           />
           <div className="flex h-full">
             <Sidebar />

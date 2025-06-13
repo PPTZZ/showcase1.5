@@ -31,7 +31,7 @@ function Dialog({ projects, onClose }: TDialog) {
   const dialog: JSX.Element | null =
     showDialog === "y" ? (
       <dialog
-        className=" flex flex-col gap-2 backdrop:bg-neutral-700/50 mx-auto my-auto shadow-xl rounded-lg relative p-4 md:w-1/4"
+        className=" flex flex-col gap-2 backdrop:bg-neutral-700/50 mx-auto my-auto shadow-xl rounded-lg relative p-4 sm:w-1/2 md:w-1/4"
         ref={dialogRef}
       >
         <div className="cursor-pointer absolute right-2.5 top-2.5 size-fit rounded-full bg-background outline outline-border text-foreground p-0.5">

@@ -1,11 +1,12 @@
 import React from "react";
 import { ThemeToggle } from "./themeToggle";
+import Link from "next/link";
 import Image from "next/image";
 import CustomSvg from "./ui/customSvg";
 
 export default function Sidebar() {
   return (
-    <div className="w-64 h-full bg-sidebar border-r flex flex-col items-center relative">
+    <div className="w-64 h-full bg-sidebar border-r hidden md:flex flex-col items-center p-4">
       <Image
         src="/IMG/profile-pic.jpg"
         alt="Profile Picture"
@@ -22,7 +23,7 @@ export default function Sidebar() {
             id="at-solid"
             className={"fill-sidebar-accent-foreground size-5.5"}
           />
-          <a href="mailto:poputa.alex@gmail.com">poputa.alex@gmail.com</a>
+          <Link href="mailto:poputa.alex@gmail.com">poputa.alex@gmail.com</Link>
         </div>
         <div className="flex gap-2 items-center">
           <CustomSvg
@@ -30,7 +31,7 @@ export default function Sidebar() {
             id="phone-solid"
             className={"fill-sidebar-accent-foreground size-5.5"}
           />
-          <a href="tel:+40751930923">+40 751 930 923</a>
+          <Link href="tel:+40751930923">+40 751 930 923</Link>
         </div>
         <div className="flex gap-2 items-center">
           <CustomSvg
@@ -38,7 +39,7 @@ export default function Sidebar() {
             id="linkedin-brands"
             className={"fill-sidebar-accent-foreground size-5.5"}
           />
-          <a href="https://www.linkedin.com/in/alex-poputa/">/in/alex-poputa</a>
+          <Link href="https://www.linkedin.com/in/alex-poputa/">/in/alex-poputa</Link>
         </div>
         <div className="flex gap-2 items-center">
           <CustomSvg
@@ -46,7 +47,7 @@ export default function Sidebar() {
             id="github-brands"
             className={"fill-sidebar-accent-foreground size-5.5"}
           />
-          <a href="https://github.com/PPTZZ">/PPTZZ</a>
+          <Link href="https://github.com/PPTZZ">/PPTZZ</Link>
         </div>
          <div className="flex gap-2 items-center">
         <CustomSvg

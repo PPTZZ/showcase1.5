@@ -20,7 +20,7 @@ function Canvas({ projects }: { projects: TProject[] }) {
 
   return (
     <>
-      <div className="w-full h-full flex flex-wrap justify-between gap-7">
+      <div className="w-full h-full flex flex-wrap justify-around xl:justify-between gap-7">
         {projects.map((project: TProject) => {
           return (
             <Card
