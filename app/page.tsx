@@ -1,13 +1,23 @@
 import Canvas from "@/components/canvas";
-import { fetchProjects } from "@/lib/actions";
+import { projectsOptions } from "@/lib/actions/fetchProjects";
+import { getQueryClient } from "@/lib/actions/getQueryClient";
+import { HydrationBoundary, dehydrate } from "@tanstack/react-query";
 
 export default async function Home() {
+  const queryClient = getQueryClient();
 
-  const projects = await fetchProjects();
-  
+  try{
+
+    void queryClient.prefetchQuery(projectsOptions);
+  }catch(err){
+    console.error('prefetch failed',err)
+  }
+
   return (
     <div className="md:w-[calc(100vw-16rem)] p-5 overflow-scroll">
-      <Canvas projects={projects} />
+      <HydrationBoundary state={dehydrate(queryClient)}>
+        <Canvas />
+      </HydrationBoundary>
     </div>
   );
 }

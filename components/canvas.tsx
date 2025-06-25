@@ -10,9 +10,13 @@ import {
 import Image from "next/image";
 import Dialog from "./ui/dialog";
 import { useRouter } from "next/navigation";
+import { useSuspenseQuery } from "@tanstack/react-query";
+import { projectsOptions } from "@/lib/actions/fetchProjects";
 
-function Canvas({ projects }: { projects: TProject[] }) {
+function Canvas() {
   const router = useRouter();
+
+  const { data } = useSuspenseQuery(projectsOptions);
 
   function handleClick(id: string | undefined) {
     router.push(`/?d=y&id=${id}`);
@@ -21,7 +25,7 @@ function Canvas({ projects }: { projects: TProject[] }) {
   return (
     <>
       <div className="w-full h-full flex flex-wrap justify-around xl:justify-between gap-7">
-        {projects.map((project: TProject) => {
+        {data.map((project: TProject) => {
           return (
             <Card
               key={project._id}
@@ -47,7 +51,7 @@ function Canvas({ projects }: { projects: TProject[] }) {
           );
         })}
       </div>
-      <Dialog projects={projects} onClose={()=>router.replace('/')}></Dialog>
+      <Dialog projects={data} onClose={() => router.replace("/")}></Dialog>
     </>
   );
 }

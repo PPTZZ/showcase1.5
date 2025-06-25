@@ -1,8 +1,8 @@
-"use server";
+import { queryOptions } from "@tanstack/react-query";
 
 // Fetching projects from the DB
 async function fetchProjects() {
-  const res = await fetch(`${process.env.SERVER_URI}/api/projects`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -12,7 +12,13 @@ async function fetchProjects() {
   if (!res.ok) {
     throw new Error(`Failed to fetch projects: ${res.statusText}`);
   }
+
   return res.json();
 }
 
-export { fetchProjects };
+
+
+export const projectsOptions = queryOptions({
+  queryKey: ["projects"],
+  queryFn: fetchProjects,
+});
