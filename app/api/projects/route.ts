@@ -6,10 +6,18 @@ export async function GET() {
   await dbConnect();
   try {
     const projects = await Project.find({});
-    
+
     return NextResponse.json(projects, { status: 200 });
-    
-  } catch (err: any) {
-    return NextResponse.json({ error: err.message }, { status: 404 });
+  } catch (err: unknown) {
+    // Proper error typing and handling
+    let errorMessage = "Failed to fetch projects";
+    if (err instanceof Error) {
+      errorMessage = err.message;
+    }
+
+    return NextResponse.json(
+      { error: errorMessage },
+      { status: 500 } // 500 is more appropriate for server errors
+    );
   }
 }

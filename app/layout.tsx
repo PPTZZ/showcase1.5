@@ -4,7 +4,6 @@ import Image from "next/image";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Sidebar from "@/components/sidebar";
-import QueryProvider from "@/components/provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,9 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${inter.className} antialiased h-dvh lg:h-[calc(100vh-10rem)] min-w-80`}
-      >
+      <body className={`${inter.className} antialiased h-dvh lg:h-[calc(100vh-10rem)] min-w-80`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -39,7 +36,7 @@ export default function RootLayout({
           />
           <div className="flex h-full">
             <Sidebar />
-            <QueryProvider>{children}</QueryProvider>
+            {children}
           </div>
         </ThemeProvider>
       </body>

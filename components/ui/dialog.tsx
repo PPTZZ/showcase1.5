@@ -1,14 +1,15 @@
 "use client";
 import React, { JSX } from "react";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useRef, useEffect } from "react";
 import { TDialog } from "@/lib/definitons";
 import { X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-function Dialog({ projects, onClose }: TDialog) {
+function Dialog({ projects }: TDialog) {
   const seaerchParams = useSearchParams();
+  const router = useRouter();
   const dialogRef = useRef<HTMLDialogElement | null>(null);
   const showDialog = seaerchParams.get("d");
   const projectId = seaerchParams.get("id");
@@ -23,7 +24,7 @@ function Dialog({ projects, onClose }: TDialog) {
 
   function closeDialog() {
     dialogRef.current?.close();
-    onClose();
+    router.push("/");
   }
 
   const selectedProject = projects.find((project) => project._id === projectId);
@@ -35,10 +36,7 @@ function Dialog({ projects, onClose }: TDialog) {
         ref={dialogRef}
       >
         <div className="cursor-pointer absolute right-2.5 top-2.5 size-fit rounded-full bg-background outline outline-border text-foreground p-0.5">
-          <X
-            onClick={closeDialog}
-            
-          />
+          <X onClick={closeDialog} />
         </div>
         <Image
           src={selectedProject?.imgUrl || " "}
@@ -48,8 +46,17 @@ function Dialog({ projects, onClose }: TDialog) {
         />
         <h2 className="text-2xl font-bold">{selectedProject?.name}</h2>
         <p>{selectedProject?.descr}</p>
-        <p className="text-xl">Tech: <span className="font-bold">{selectedProject?.tech}</span></p>
-        <Link href={selectedProject?.link || '#'} className="bg-sidebar-primary text-sidebar-primary-foreground flex justify-center align-middle p-2 rounded-lg w-28" target="_blank" rel="noopener noreferer nofollow">Visit page</Link>
+        <p className="text-xl">
+          Tech: <span className="font-bold">{selectedProject?.tech}</span>
+        </p>
+        <Link
+          href={selectedProject?.link || "#"}
+          className="bg-sidebar-primary text-sidebar-primary-foreground flex justify-center align-middle p-2 rounded-lg w-28"
+          target="_blank"
+          rel="noopener noreferer nofollow"
+        >
+          Visit page
+        </Link>
       </dialog>
     ) : null;
 

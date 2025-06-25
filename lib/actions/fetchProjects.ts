@@ -1,7 +1,6 @@
-import { queryOptions } from "@tanstack/react-query";
 
 // Fetching projects from the DB
-async function fetchProjects() {
+export async function fetchProjects() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`, {
     method: "GET",
     headers: {
@@ -17,8 +16,3 @@ async function fetchProjects() {
 }
 
 
-
-export const projectsOptions = queryOptions({
-  queryKey: ["projects"],
-  queryFn: fetchProjects,
-});

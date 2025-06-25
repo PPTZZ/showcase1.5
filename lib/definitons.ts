@@ -11,7 +11,6 @@ export type TProject = Document & {
 
 export type TDialog = {
   projects: TProject[];
-  onClose: () => void;
 };
 
 export type TSvgProps = {
