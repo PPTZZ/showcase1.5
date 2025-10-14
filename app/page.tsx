@@ -16,11 +16,10 @@ import LoadingSpinner from "@/components/ui/loadingSpinner";
 // Dynamically import Dialog with no SSR
 const Dialog = dynamic(() => import("@/components/ui/dialog"), {
     ssr: false,
-    loading: () => <div className="hidden"/>, // Empty loading state since dialog is hidden initially
+    loading: () => <div className="hidden"/>,
 });
 
 // Fallback data in case API fails
-
 export default function ProjectsPage() {
     const [projects, setProjects] = useState<TProject[]>([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -95,7 +94,7 @@ export default function ProjectsPage() {
                             </CardContent>
                             <CardFooter>
                                 <p className="text-sm text-muted-foreground">
-                                    Technologies: {project.tech}
+                                    Technologies: {project.tech.join(' ')}
                                 </p>
                             </CardFooter>
                         </Card>

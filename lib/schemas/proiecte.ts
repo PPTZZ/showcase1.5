@@ -15,7 +15,7 @@ const projectsSchema: Schema<TProject> = new mongoose.Schema({
     required: true,
   },
   tech: {
-    type: String,
+    type: [String],
     required: true,
   },
   link: {

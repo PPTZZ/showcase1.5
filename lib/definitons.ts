@@ -5,7 +5,7 @@ export type TProject = Document & {
   name: string;
   descr: string;
   imgUrl: string;
-  tech: string;
+  tech: string[];
   link: string;
 };
 
