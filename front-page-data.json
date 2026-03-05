@@ -1,6 +1,10 @@
 {
   "profile_pic": "#",
   "profile_descr": " I am an enthusiastic early adopter of technology, committed to staying current with industry best practices, I'm always looking for the next challenge and to hone my skills.",
-  "latest_project_title": "#",
-  "latest_project_descr": "#"
+  "latest_project":{
+    "title": "Household Manager",
+    "tech": ["NextJS"],
+    "descr": "Some description tecxt here",
+    "img":"public/work-in-progress.png"
+  }
 }

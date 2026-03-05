@@ -13,13 +13,15 @@ const btnVariants = cva('font-semibold cursor-pointer text-white flex items-cent
         variant: {
             primary: 'bg-primary rounded-md',
             secondary: 'bg-amber-100 text-black rounded-md',
-            link:'bg-background-main rounded-3xl',
+            link:'',
             danger: 'bg-red-400 rounded-md',
+            file_serving:'bg-background-main rounded-3xl'
         },
         size: {
             full:'px-6 py-2 text-xl w-full',
             lg: 'px-6 py-2 text-xl min-w-20',
-            link:'py-1 px-3 text-lg'
+            mid:'py-1 px-3 text-lg',
+            link:''
         },
     },
     defaultVariants: {
