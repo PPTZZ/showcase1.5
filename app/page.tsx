@@ -1,107 +1,36 @@
-"use client";
-import {Suspense, useEffect, useState} from "react";
-import type {TProject} from "@/lib/definitons";
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardTitle,
-} from "@/components/ui/card";
+import React from 'react'
 import Image from "next/image";
-import Link from "next/link";
-import dynamic from "next/dynamic";
-import LoadingSpinner from "@/components/ui/loadingSpinner";
+import profilePic from '@/public/profile-pic-crop.png'
+import frontPageData from '@/front-page-data.json'
 
-// Dynamically import Dialog with no SSR
-const Dialog = dynamic(() => import("@/components/ui/dialog"), {
-    ssr: false,
-    loading: () => <div className="hidden"/>,
-});
-
-// Fallback data in case API fails
-export default function ProjectsPage() {
-    const [projects, setProjects] = useState<TProject[]>([]);
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
-
-    useEffect(() => {
-        const fetchProjects = async () => {
-            try {
-                setIsLoading(true);
-                const response = await fetch("/api/projects");
-
-                if (!response.ok) {
-                    throw new Error("Failed to fetch projects");
-                }
-
-                const data = await response.json();
-                setProjects(data);
-            } catch (err) {
-                console.error("Fetch error:", err);
-                setError("Failed to load projects. Showing sample data.");
-            } finally {
-                setIsLoading(false);
-            }
-        };
-
-        fetchProjects();
-    }, []);
-
-    if (isLoading) {
-        return (
-            <div className="w-full h-full flex items-center justify-center">
-                <LoadingSpinner/>
-            </div>
-        );
-    }
-
-    if (error) {
-        return <div className="w-full p-4 text-center text-red-500">{error}</div>;
-    }
-
+const Home = async () => {
     return (
-        <Suspense
-            fallback={
-                <div className="w-full h-full flex items-center justify-center">
-                    <LoadingSpinner/>
+        <main className={'w-full'}>
+            <div className={'container mx-auto flex gap-5 justify-between'}>
+
+
+                <div className={'w-3/5 flex flex-col gap-4'}>
+                    <h1 className={'text-6xl font-bold '}>
+                        Hi I'm Alex
+                    </h1>
+                    <p className={'text-3xl font-semibold'}>
+                        {frontPageData.profile_descr}
+                    </p>
                 </div>
-            }
-        >
-            <div className="w-full h-full flex flex-wrap justify-around xl:justify-between gap-7 p-4 overflow-x-scroll">
-                {projects.map((project: TProject) => (
-                    <Link
-                        href={`/?d=y&id=${project._id}`}
-                        key={project._id}
-                        scroll={false}
-                    >
-                        <Card className="w-96 hover:shadow-lg transition-shadow">
-                            <div className="relative h-48">
-                                <Image
-                                    src={project.imgUrl}
-                                    alt={project.name}
-                                    fill
-                                    className="object-cover"
-                                    sizes="(max-width: 768px) 100vw, 33vw"
-                                    priority={false}
-                                />
-                            </div>
-                            <CardContent>
-                                <CardTitle className="mt-2">{project.name}</CardTitle>
-                                <CardDescription className="line-clamp-2 mt-2">
-                                    {project.descr}
-                                </CardDescription>
-                            </CardContent>
-                            <CardFooter>
-                                <p className="text-sm text-muted-foreground">
-                                    Technologies: {project.tech.join(' ')}
-                                </p>
-                            </CardFooter>
-                        </Card>
-                    </Link>
-                ))}
+                <div
+                    className={'bg-radial-[at_43%_35%] from-gray-200 from-30% to-background-main w-fit rounded-3xl px-2 max-lg:w-1/5'}>
+                    <Image src={profilePic} alt={'Profile picture of the lead developer'} height={914} width={1321}
+                           className={'w-96 h-auto'}/>
+                </div>
+
             </div>
-            <Dialog projects={projects}/>
-        </Suspense>
+            <div className={'bg-primary h-28 my-5 py-5'}>
+                <h1 className={'max-sm:text-center lg:self-start text-4xl font-bold lg:mb-24 container mx-auto text-white'}>
+                    Currently working on
+                </h1>
+            </div>
+
+        </main>
     );
 }
+export default Home

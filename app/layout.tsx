@@ -1,16 +1,13 @@
 import type {Metadata} from "next";
-import {Inter} from "next/font/google";
-import Image from "next/image";
+import React from "react";
 import "./globals.css";
-import {ThemeProvider} from "@/components/theme-provider";
-import Sidebar from "@/components/sidebar";
+import {ThemeProvider} from "next-themes";
+import Navbar from "../lib/components/navbar";
 
-const inter = Inter({
-    subsets: ["latin"],
-});
+
 export const metadata: Metadata = {
-    title: "Alex's Portfolio",
-    description: "Personal portofolio of Alex P.",
+    title: "Alex's portofolio",
+
 };
 
 export default function RootLayout({
@@ -20,24 +17,12 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" suppressHydrationWarning>
-        <body className={`${inter.className} antialiased h-dvh lg:h-[calc(100vh-10rem)] min-w-80`}>
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
+        <body
+            className={`antialiased text-foreground-main bg-background-main h-screen pt-22 `}
         >
-            <Image
-                src={"/IMG/keyboard.jpg"}
-                alt="header image of keyboard"
-                width={1920}
-                height={249}
-                className="w-full h-40 object-cover hidden lg:block"
-            />
-            <div className="flex h-full">
-                <Sidebar/>
-                {children}
-            </div>
+        <ThemeProvider defaultTheme='dark' enableColorScheme={true}>
+            <Navbar/>
+            {children}
         </ThemeProvider>
         </body>
         </html>
