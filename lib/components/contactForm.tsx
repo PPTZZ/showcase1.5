@@ -1,9 +1,9 @@
 'use client'
 import React, { useActionState, useEffect } from 'react'
-import { sendMessage } from "@/lib/services/actions";
-import PButton from "@/lib/ui/pButton";
-import { TFormState } from "@/lib/definitons";
 import toast, { Toaster } from "react-hot-toast";
+import {sendMessage} from "../services/actions";
+import {TFormState} from "../definitons";
+import PButton from "../ui/pButton";
 
 const ContactForm = () => {
     const initialState: TFormState = {

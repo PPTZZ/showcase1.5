@@ -1,5 +1,5 @@
 import mongoose, { Schema } from "mongoose";
-import type { TProject } from "@/lib/definitons";
+import {TProject} from "../definitons";
 
 const projectsSchema: Schema<TProject> = new mongoose.Schema({
   name: {

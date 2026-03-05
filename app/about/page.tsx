@@ -1,7 +1,8 @@
 import React from 'react'
-import CustomImage from "@/lib/components/customImage";
-import ServeFile from "@/lib/components/serveFile";
+
 import {LuChevronDown} from "react-icons/lu";
+import ServeFile from "../../lib/components/serveFile";
+import CustomImage from "../../lib/components/customImage";
 
 const About = () => {
 

@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import PButton from "@/lib/ui/pButton";
+import PButton from "../ui/pButton";
 
 const ServeFile = ({children, link, className}: {  link: string,children:React.ReactNode,className:string }) => {
 

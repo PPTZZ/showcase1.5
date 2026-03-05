@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
-import {TProject} from "@/lib/definitons";
 import Image from "next/image";
-import PButton from "@/lib/ui/pButton";
 import {LuChevronsRight} from "react-icons/lu";
 import {useRouter} from "next/navigation";
+import PButton from "../ui/pButton";
+import {TProject} from "../definitons";
 
 
 const Card = ({name, descr, imgUrl, tech, id}: Partial<TProject>) => {

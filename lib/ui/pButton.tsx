@@ -1,13 +1,12 @@
 import {cva, type VariantProps} from "class-variance-authority";
 import type {ButtonHTMLAttributes, ReactNode} from "react";
-import {cn} from "@/lib/services/utils";
+import {cn} from "../services/utils";
 
 type TCutsomButton = ButtonHTMLAttributes<HTMLButtonElement>
     & VariantProps<typeof btnVariants>
     & {
     children: ReactNode;
 }
-
 
 const btnVariants = cva('font-semibold cursor-pointer text-white flex items-center justify-center', {
     variants: {

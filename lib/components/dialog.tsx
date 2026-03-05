@@ -1,9 +1,10 @@
 "use client";
 import React, {JSX, useEffect, useRef} from "react";
 import {useRouter, useSearchParams} from "next/navigation";
-import { LuX } from "react-icons/lu";import Image from "next/image";
-import {TDialogProps} from "@/lib/definitons";
-import PButton from "@/lib/ui/pButton";
+import { LuX } from "react-icons/lu";
+import Image from "next/image";
+import {TDialogProps} from "../definitons";
+import PButton from "../ui/pButton";
 
 function Dialog({projects}: { projects: Partial<TDialogProps[]> }) {
     const searchParams = useSearchParams();

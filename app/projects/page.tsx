@@ -1,4 +1,4 @@
-import data from'@/data.json';
+import data from'../../data.json';
 import Dialog from "../../lib/components/dialog";
 import Card from "../../lib/components/card";
 

@@ -1,10 +1,11 @@
 'use client'
-import {links} from "@/lib/services/utils";
 import Link from "next/link";
 import {usePathname} from "next/navigation";
 import {useState} from "react";
 import { LuMenu } from "react-icons/lu";
-import ThemeSwitch from "@/lib/components/themeSwitch";
+import {links} from "../services/utils";
+import ThemeSwitch from "./themeSwitch";
+
 
 
 const Navbar = () => {

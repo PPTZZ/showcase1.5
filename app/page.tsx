@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from "next/image";
-import profilePic from '@/public/profile-pic-crop.png'
-import frontPageData from '@/front-page-data.json'
+import profilePic from '../public/profile-pic-crop.png'
+import frontPageData from '../front-page-data.json'
 
 const Home = async () => {
     return (
