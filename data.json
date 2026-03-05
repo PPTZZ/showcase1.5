@@ -1,0 +1,107 @@
+[
+  {
+    "_id": "68176ff114cfc1215831c89d",
+    "name": "Image Search",
+    "descr": "Using only the basic building blocks of the internet HTML, CSS and JavaScript, I've created a search prompt that returns an interactive image gallery of the search parameter, with infinite scrolling as pagination.",
+    "imgUrl": "https://ik.imagekit.io/pwl89PIJucRz3Mc/image-search.png?updatedAt=1746778778702",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://pptzz.github.io/goit-js-hw-11/"
+  },
+  {
+    "_id": "68176ff114cfc1215831c8a0",
+    "name": "Simon Says",
+    "descr": "This is a basic game of Simon Says in which I used HTML and CSS to create 4 buttons with a basic layout, and then implemented the game loop using JavaScript, to generate a random pattern and check if the user replicates the pattern correctly.",
+    "imgUrl": "https://ik.imagekit.io/pwl89PIJucRz3Mc/simon-says.png?updatedAt=1746778776667",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://pptzz.github.io/simon-says/"
+  },
+  {
+    "_id": "68176ff114cfc1215831c89c",
+    "name": "Money Guard",
+    "descr": "This is a mock finance management app where you can register a user to keep track of your income and expenses with the help of detailed graphs and filters. My role in this project involved state management via Redux, handling all API calls, and building the user interface so that it loads the corresponding interface after the screen is resized.",
+    "imgUrl": "https://ik.imagekit.io/pwl89PIJucRz3Mc/Money-Guard.jpg?updatedAt=1746778776822",
+    "tech": [
+      "ReactJS",
+      "CSS",
+      "NodeJS"
+    ],
+    "link": "https://reutmihai.github.io/Money-Guard/"
+  },
+  {
+    "_id": "68176ff114cfc1215831c89e",
+    "name": "WebStudio",
+    "descr": "Following a specific design in Figma and using only basic HTML and CSS to create, from  scratch, a responsive mock presentation website for a web development firm.",
+    "imgUrl": "https://ik.imagekit.io/pwl89PIJucRz3Mc/web-studio.png?updatedAt=1746778777834",
+    "tech": [
+      "HTML",
+      "CSS"
+    ],
+    "link": "https://pptzz.github.io/goit-markup-hw-07/"
+  },
+  {
+    "_id": "68176ff114cfc1215831c89b",
+    "name": "Face Detector",
+    "descr": "A small app, built  using React.js for the client and Express for the server, that takes an image from a link and via API communicates with the Clarifai AI model to recognize faces. Using the free version, it only returns the position of the first face it detects in a picture with multiple faces.",
+    "imgUrl": "https://ik.imagekit.io/pwl89PIJucRz3Mc/face-detector.png?updatedAt=1746778777353",
+    "tech": [
+      "ReactJS",
+      "NodeJS",
+      "Clarifai API"
+    ],
+    "link": "https://resilient-twilight-3a61ff.netlify.app/"
+  },
+  {
+    "_id": "68176ff114cfc1215831c8a3",
+    "name": "ISS Location",
+    "descr": "An app that I built to automatically tap into a public API and retrieve the live location of the ISS every 3 seconds using only React and CSS.",
+    "imgUrl": "https://ik.imagekit.io/pwl89PIJucRz3Mc/iss-location.png?updatedAt=1746778776580",
+    "tech": [
+      "React",
+      "CSS"
+    ],
+    "link": "https://dazzling-cassata-2828c8.netlify.app/"
+  },
+  {
+    "_id": "68176ff114cfc1215831c8a2",
+    "name": "Background Generator",
+    "descr": "While exercising DOM manipulation with JS, I've created a background generator that creates a gradient from random colors and outputs the CSS syntax needed for your project.",
+    "imgUrl": "https://ik.imagekit.io/pwl89PIJucRz3Mc/gradient-generator.png?updatedAt=1746778777328",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://quiet-zabaione-ad3e2b.netlify.app/"
+  },
+  {
+    "_id": "68176ff114cfc1215831c8a1",
+    "name": "Drum Kit",
+    "descr": "It's a drum kit I made when I was learning how to add sound and make responsive buttons that reacted to the user pressing specific keys on the keyboard or clicking on different buttons.",
+    "imgUrl": "https://ik.imagekit.io/pwl89PIJucRz3Mc/drum-kit.png?updatedAt=1746778776951",
+    "tech": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "link": "https://vermillion-vacherin-2ad7e7.netlify.app/"
+  },
+  {
+    "_id": "68176ff114cfc1215831c89f",
+    "name": "RoboFriends",
+    "descr": "Using React, I've created a quick contacts web app that uses a mock API to fetch contact information from a server and display it under each Robofriends character.",
+    "imgUrl": "https://ik.imagekit.io/pwl89PIJucRz3Mc/robofriends.png?updatedAt=1746778777149",
+    "tech": [
+      "React",
+      "CSS"
+    ],
+    "link": "https://deluxe-sunshine-17fe3f.netlify.app/"
+  }
+]
