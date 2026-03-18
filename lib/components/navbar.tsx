@@ -14,9 +14,8 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className={'absolute top-0 left-0 w-full'}>
             <div
-                className={'w-full h-12 border-b-2 border-outline-main shadow-lg flex items-center justify-center bg-background-secondary relative'}>
+                className={'w-full h-12 border-b-2 border-outline-main shadow-lg flex items-center justify-center bg-background-secondary fixed top-0'}>
                 <div className={'hidden md:flex items-center justify-around md:w-2/4'}>
                     {links.map((link, i) =>
                         <Link
@@ -50,7 +49,6 @@ const Navbar = () => {
                 </div>
                 <ThemeSwitch/>
             </div>
-        </div>
     )
 }
 export default Navbar

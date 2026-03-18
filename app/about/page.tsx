@@ -10,7 +10,7 @@ const About = () => {
     return (
         <>
             <section
-                className={'grid grid-cols-1 md:grid-cols-2 w-full lg:max-w-3/5 lg:mx-auto place-items-center px-10'}>
+                className={'grid grid-cols-1 md:grid-cols-2 w-full lg:max-w-3/5 lg:mx-auto place-items-center px-10 mt-18'}>
                 <div className={' flex flex-col items-center text-center md:border-r-2 border-primary md:px-20'}>
                     <p className={' text-xl tracking-widest'}>
                         I&apos;m a dedicated and pragmatic Full Stack Developer focused on delivering clean, functional
@@ -23,9 +23,7 @@ const About = () => {
                         className={'my-4 lg:my-6 bg-primary hover:bg-conic/decreasing hover:bg-animate-spin hover:from-violet-700 hover:via-lime-300 hover:to-violet-700 rounded-3xl w-fit h-fit p-0.5 overflow-hidden transition-colors duration-500'}>
                         <ServeFile
                             link={'https://drive.google.com/file/d/1J3McLr-TI6ZEHUGl1XJfXMayJDz4EWe9/view?usp=sharing'}
-                            className={'group flex items-center justify-center gap-1'}>resume
-                            <LuChevronDown
-                                className={'group-hover:animate-bounce group-hover:animate-infinite group-hover:animate-duration-1000 group-hover:animate-ease-in-out'}/>
+                            className={'group flex items-center justify-center gap-1'}>resumé
                         </ServeFile>
                     </div>
                 </div>
@@ -58,8 +56,6 @@ const About = () => {
                         <ServeFile
                             link={'https://drive.google.com/file/d/10LUHkaXvxn4vcPGiTpDxaCPqxXSy9w_1/view?usp=sharing'}
                             className={'group flex items-center justify-center gap-1'}>certificate
-                            <LuChevronDown
-                                className={'group-hover:animate-bounce group-hover:animate-infinite group-hover:animate-duration-1000 group-hover:animate-ease-in-out'}/>
                         </ServeFile>
                     </div>
                 </div>

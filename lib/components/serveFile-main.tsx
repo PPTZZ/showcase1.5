@@ -9,7 +9,7 @@ const ServeFile = ({children, link, className}: { link: string, children: React.
     }
 
     return (
-        <PButton variant={'file_serving'} size={'mid'} onClick={handleFile} className={className}>
+        <PButton variant={'secondary'} size={'lg'} onClick={handleFile} className={className}>
             {children}
         </PButton>
     )

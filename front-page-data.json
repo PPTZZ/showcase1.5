@@ -1,10 +1,13 @@
 {
   "profile_pic": "#",
-  "profile_descr": " I am an enthusiastic early adopter of technology, committed to staying current with industry best practices, I'm always looking for the next challenge and to hone my skills.",
-  "latest_project":{
+  "profile_descr": " I am an enthusiastic early adopter of technology, committed to staying current with industry best practices. I'm always looking for the next challenge and to hone my skills.",
+  "latest_project": {
     "title": "Household Manager",
-    "tech": ["NextJS"],
-    "descr": "Some description tecxt here",
-    "img":"public/work-in-progress.png"
+    "tech": [
+      "NextJS"
+    ],
+    "descr": "Household manager is an web-app that I am developing and plan to maintain and grow, so I can easily keep track of all the expenses in the house, like rent and various bills. I am developing this web-app using NextJS and MongoDB as the database. ",
+    "img": "public/work-in-progress.png",
+    "link": "https://github.com/PPTZZ/household_management"
   }
 }

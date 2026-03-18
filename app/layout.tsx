@@ -6,7 +6,7 @@ import Navbar from "../lib/components/navbar";
 
 
 export const metadata: Metadata = {
-    title: "Alex's portofolio",
+    title: "Alex's portfolio",
 
 };
 
@@ -18,7 +18,7 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
         <body
-            className={`antialiased text-foreground-main bg-background-main h-screen pt-22 `}
+            className={`antialiased text-foreground-main bg-background-main h-[calc(100%-48px)]`}
         >
         <ThemeProvider defaultTheme='dark' enableColorScheme={true}>
             <Navbar/>
