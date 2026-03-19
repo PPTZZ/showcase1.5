@@ -1,6 +1,6 @@
 'use client'
-import React, { useActionState, useEffect } from 'react'
-import toast, { Toaster } from "react-hot-toast";
+import React, {useActionState, useEffect} from 'react'
+import toast, {Toaster} from "react-hot-toast";
 import {sendMessage} from "../services/actions";
 import {TFormState} from "../definitons";
 import PButton from "../ui/pButton";
@@ -27,25 +27,28 @@ const ContactForm = () => {
             <form action={formAction} className={'flex flex-col gap-2 h-full'}>
                 <div className={'h-16 w-full'}>
                     <input type="text" name={'name'}
-                        className={`w-full border-2 rounded h-10 pl-2  ${state?.errors.name ? 'border-custom-error' : 'border-outline-main'}`}
-                        placeholder={'full name *'} />
-                    {state?.errors.name && <p className={'text-custom-error font-semibold tracking-wide'}>{state.errors.name}</p>}
+                           className={`w-full border-2 rounded h-10 pl-2  ${state?.errors.name ? 'border-custom-error' : 'border-outline-main'}`}
+                           placeholder={'full name *'}/>
+                    {state?.errors.name &&
+                        <p className={'text-custom-error font-semibold tracking-wide'}>{state.errors.name}</p>}
                 </div>
                 <div className={'h-16 w-full'}>
                     <input type="text" name={'email'}
-                        className={`w-full border-2 rounded h-10 pl-2  ${state?.errors.email ? 'border-custom-error' : 'border-outline-main'}`}
-                        placeholder={'email *'} />
-                    {state?.errors.email && <p className={'text-custom-error font-semibold tracking-wide'}>{state.errors.email}</p>}
+                           className={`w-full border-2 rounded h-10 pl-2  ${state?.errors.email ? 'border-custom-error' : 'border-outline-main'}`}
+                           placeholder={'email *'}/>
+                    {state?.errors.email &&
+                        <p className={'text-custom-error font-semibold tracking-wide'}>{state.errors.email}</p>}
                 </div>
                 <div className={'h-56 w-full'}>
                     <textarea name={"text"} maxLength={250}
-                        className={`w-full h-50 border-2 rounded pl-2 ${state?.errors.text ? 'border-custom-error' : 'border-outline-main'}`}
-                        placeholder={'your message here... *'} />
-                    {state?.errors.text && <p className={'text-custom-error font-semibold tracking-wide'}>{state.errors.text}</p>}
+                              className={`w-full h-50 border-2 rounded pl-2 ${state?.errors.text ? 'border-custom-error' : 'border-outline-main'}`}
+                              placeholder={'your message here... *'}/>
+                    {state?.errors.text &&
+                        <p className={'text-custom-error font-semibold tracking-wide'}>{state.errors.text}</p>}
                 </div>
                 <PButton variant={"primary"} size={'full'} type={"submit"} disabled={isPending}>send</PButton>
             </form>
-            <Toaster position={'bottom-center'} toastOptions={{ className: 'font-bold' }} />
+            <Toaster position={'bottom-center'} toastOptions={{className: 'font-bold'}}/>
         </div>
     )
 }

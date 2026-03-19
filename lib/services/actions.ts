@@ -2,6 +2,7 @@
 import {getIronSession, SessionOptions} from "iron-session";
 import {cookies} from "next/headers";
 import {Errors, TFormState, TSessionData} from "../definitons";
+import transporter from "./sendMail";
 
 
 // COOKIE OPTIONS
@@ -54,26 +55,24 @@ export const sendMessage = async (prevState: TFormState, formData: FormData): Pr
         };
     }
 
-    //composing the message body
-    const messageData = {
-        name,
-        email,
-        text
-    }
-    const options = {
-        method: "POST",
-        body: JSON.stringify(messageData),
-        headers: {
-            "Content-Type": "application/json; charset=utf-8",
-        },
-    };
+
     // sending the message and if successful setting a cookie to block next messages for an hour
     try {
-        // const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contact`!, options);
-        // if (data.status === 201) {
-        await setSession()
-        // }
-
+        const message = {
+            from: `${email}`,
+            to: `${process.env.GMAIL_USER}`,
+            subject: 'Mesaj de la portofoliu',
+            html: `
+                <p>Email: ${email}</p>
+                <p>Name: ${name}</p>
+                <p>Message: ${text}</p>
+                `,
+            headers: {
+                "X-Entry-Ref-ID": "newmail"
+            },
+        }
+        await transporter.sendMail(message);
+        await setSession();
         return {
             message: 'Message sent successfully',
             errors: {}
