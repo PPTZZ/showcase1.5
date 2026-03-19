@@ -7,8 +7,8 @@ import ServeFileMain from "../lib/components/serveFile-main";
 
 const Home = async () => {
     return (
-        <main className={'w-full flex flex-col h-screen pt-10'}>
-            <div className={'container mx-auto flex gap-5 grow md:justify-between'}>
+        <main className={'w-full flex flex-col min-h-screen pt-16 md:pt-10'}>
+            <div className={'max-md:px-4 container mx-auto flex gap-5 grow md:justify-between'}>
                 <div className={'md:w-3/5 flex flex-col justify-center gap-4'}>
                     <h1 className={'text-6xl font-bold '}>
                         Hi! I'm Alex.
@@ -16,7 +16,7 @@ const Home = async () => {
                     <p className={'text-3xl font-semibold'}>
                         {frontPageData.profile_descr}
                     </p>
-                    <div className={'flex gap-6'}>
+                    <div className={'flex gap-6 mb-4'}>
                         <ServeFileMain link={'https://drive.google.com/file/d/1J3McLr-TI6ZEHUGl1XJfXMayJDz4EWe9/view'}
                                        className={''}>
                             CV
@@ -34,10 +34,10 @@ const Home = async () => {
                 </div>
             </div>
             <div
-                className={"relative overflow-hidden bg-primary object-fill py-6 text-white"}>
+                className={"bg-primary py-6 text-white max-md:px-4 "}>
                 <div className={'container mx-auto '}>
                     <div className={'md:max-w-2/5'}>
-                        <h1 className={'max-sm:text-center lg:self-start text-4xl font-bold mx-auto '}>
+                        <h1 className={'text-4xl font-bold '}>
                             Currently working on...
                         </h1>
                         <div>

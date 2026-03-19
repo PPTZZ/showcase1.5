@@ -34,7 +34,7 @@ const Navbar = () => {
                         setIsOpen(!isOpen)
                     }} className={'cursor-pointer size-8 p-1 rounded hover:bg-background-main duration-150'}/>
                     {isOpen && <div onClick={() => setIsOpen(!isOpen)}
-                                    className={'w-full sm:w-1/2 flex flex-col items-center absolute top-8 bg-background-secondary sm:rounded-b-xl animate-fade-down animate-once animate-duration-500 animate-ease-in-out'}>
+                                    className={'w-full sm:w-1/2 flex flex-col items-center absolute top-8 bg-background-secondary sm:rounded-b-xl animate-fade-down animate-once animate-duration-500 animate-ease-in-out z-50'}>
                         {links.map((link, i) =>
                             <Link
                                 key={i}
