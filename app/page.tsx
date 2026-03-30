@@ -4,6 +4,7 @@ import profilePic from '../public/profile-pic-crop.png'
 import frontPageData from '../front-page-data.json'
 import Link from "next/link";
 import ServeFileMain from "../lib/components/serveFile-main";
+import ServeFile from "../lib/components/serveFile";
 
 const Home = async () => {
     return (
@@ -17,10 +18,10 @@ const Home = async () => {
                         {frontPageData.profile_descr}
                     </p>
                     <div className={'flex gap-6 mb-4'}>
-                        <ServeFileMain link={'https://drive.google.com/file/d/1J3McLr-TI6ZEHUGl1XJfXMayJDz4EWe9/view'}
-                                       className={''}>
-                            CV
-                        </ServeFileMain>
+                        <ServeFile link={'https://drive.google.com/file/d/1J3McLr-TI6ZEHUGl1XJfXMayJDz4EWe9/view'}
+                                   className={''}>
+                            Resume
+                        </ServeFile>
                         <ServeFileMain link={'https://drive.google.com/file/d/10LUHkaXvxn4vcPGiTpDxaCPqxXSy9w_1/view'}
                                        className={''}>
                             Certification

@@ -13,9 +13,7 @@ const btnVariants = cva('font-semibold cursor-pointer text-white flex items-cent
         variant: {
             primary: 'bg-primary rounded-md',
             secondary: 'bg-amber-100 text-black rounded-md',
-            link: '',
-            danger: 'bg-red-400 rounded-md',
-            file_serving: 'bg-background-main rounded-3xl text-foreground-main'
+            link: ''
         },
         size: {
             full: 'px-6 py-2 text-xl w-full',

@@ -8,7 +8,7 @@ import ContactForm from "../../lib/components/contactForm";
 const Contact = () => {
     return (
         <div
-            className={'w-full md:max-w-3/4 lg:max-w-3/5 h-1/2 lg:h-full grid grid-cols-1 md:grid-cols-2 md:pt-40 max-md:px-10 gap-10 mx-auto'}>
+            className={'w-full md:max-w-3/4 lg:max-w-3/5 h-1/2 lg:h-full grid grid-cols-1 md:grid-cols-2 md:pt-40 max-md:px-10 gap-10 mx-auto max-md:mt-18'}>
             <div className={'lg:h-3/4 flex flex-col items-center-safe md:items-start gap-6'}>
                 <h1 className={'max-sm:text-center self-center lg:self-start text-6xl font-bold lg:mb-24'}>Contact
                     me!</h1>
