@@ -18,7 +18,7 @@ const About = () => {
                         applications,
                         often opting for Next.js for its performance benefits and superior developer experience.
                     </p>
-                    <ServeFile link={'https://drive.google.com/file/d/1J3McLr-TI6ZEHUGl1XJfXMayJDz4EWe9/view'}
+                    <ServeFile link={'https://drive.google.com/file/d/1g86QhC4Q2Ysh7_23MS2bfUAt1F_l_jb_/view?usp=sharing'}
                                className={'m-2'}>
                         Resume
                     </ServeFile>

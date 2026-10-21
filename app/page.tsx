@@ -18,7 +18,7 @@ const Home = async () => {
                         {frontPageData.profile_descr}
                     </p>
                     <div className={'flex gap-6 mb-4'}>
-                        <ServeFile link={'https://drive.google.com/file/d/1J3McLr-TI6ZEHUGl1XJfXMayJDz4EWe9/view'}
+                        <ServeFile link={'https://drive.google.com/file/d/1g86QhC4Q2Ysh7_23MS2bfUAt1F_l_jb_/view?usp=sharing'}
                                    className={''}>
                             Resume
                         </ServeFile>
